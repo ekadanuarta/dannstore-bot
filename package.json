@@ -3,10 +3,9 @@
   "version": "4.0.0",
   "description": "None",
   "main": "main.js",
-  "scripts": {
-    "start": "node main",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "directories": {
+    "lib": "lib"
+    }, 
   "dependencies": {
     "@adiwajshing/baileys": "^4.2.0",
     "async": "^2.4.1",
@@ -39,18 +38,21 @@
     "spinnies": "^0.5.1",
     "yt-search": "^2.10.2"
   },
-  "directories": {
-    "lib": "lib"
-  }, 
+  "scripts": {
+    "start": "node main",
+    "test": "supervisor main"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dcode-denpa/Semar-BMD.git"
+    "url": "git+https://github.com/Errs404"
   },
-  "keywords": [],
-  "author": """,
+  "keywords": [
+    "Wasu"
+  ],
+  "author": "Prassz",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dcode-denpa/Semar-BMD/issue"
+    "url": "https://github.com/Errs404/Base-Self-Zero/issue"
   },
-  "homepage": "https://github.com/dcode-denpa/Semar-BMD#readme"
+  "homepage": "https://github.com/Errs404/Errs404"
 }
