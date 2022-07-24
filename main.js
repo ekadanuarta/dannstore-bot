@@ -8,18 +8,12 @@ const _welkom = JSON.parse(fs.readFileSync('./database/welcome.json'))
 require('./eka.js')
 nocache('./eka.js', module => console.log(`${module} telah di update !!`))
 
-Eka.ev.on('messages.upsert', async eka => {
-if (!eka.messages) return
-msg = eka.messages[0]
-nomorOwner = ['6288221400832']
-console.log(msg)
-require("./eka")(Eka, mek, _welkom)})
-
-Eka.ev.on('connection.update', (update) => {
-const {connection,lastDisconnect} = update
-if (connection === 'close') {lastDisconnect.error?.output?.statusCode !== DisconnectReason.loggedOut ? connectKeWA() : ''}
-Eka.ev.on('creds.update', saveState)
-console.log(update)})}	
+const starts = async (Eka = new WAConnection()) => {
+    Eka.logger.level = 'warn'
+    Eka.version = [2, 2142, 12]
+    Eka.on('qr', () => {
+        console.log(color('[','white'), color('!','red'), color(']','white'), color(' Scan Qrnya Kak Waktu Cuma 20 Detik !!'))
+    })
       const sendButImage = async (from, context, fotext, img, but) => {
     gam = img
     jadinya = await Eka.prepareMessage(from, gam, MessageType.image)
@@ -32,6 +26,19 @@ console.log(update)})}
     }
     Eka.sendMessage(from, buttonMessagesI, MessageType.buttonsMessage)
   }
+  fs.existsSync('./session.json') && Eka.loadAuthInfo('./session.json')
+    Eka.on('connecting', () => {
+        start('2', 'MENGHUBUNGKAN BRO !!...')
+    })
+    Eka.on('open', () => {
+        success('2', 'TERHUBUNG BRO !!')
+    })
+    await Eka.connect({timeoutMs: 30*1000})
+        fs.writeFileSync('./session.json', JSON.stringify(Eka.base64EncodedAuthInfo(), null, '\t'))
+
+    Eka.on('chat-update', async (message) => {
+        require('./eka.js')(Eka, message, _welkom)
+    })
 Eka.on("group-participants-update", async (anu) => {
 
     const isWelkom = _welkom.includes(anu.jid)
