@@ -1,6 +1,6 @@
 {
-  "name": "XaviorOfc",
-  "version": "2.3.0",
+  "name": "hisoka-morou",
+  "version": "2.5.0",
   "description": "WhatsApp Using Lib Baileys Multi Device",
   "main": "index.js",
   "type": "commonjs",
@@ -18,10 +18,10 @@
     "bot-md",
     "multi-device"
   ],
-  "author": "XaviorOfc.",
+  "author": "Dika Ardnt.",
   "license": "MIT",
   "dependencies": {
-    "@adiwajshing/baileys": "^4.2.0",
+    "@adiwajshing/baileys" : "^4.4.0",
     "@adiwajshing/keyed-db": "^0.2.4",
     "awesome-phonenumber": "^2.64.0",
     "axios": "^0.24.0",
@@ -54,7 +54,7 @@
     "scrape-primbon": "^1.1.0",
     "util": "^0.12.4",
     "yargs": "^17.2.1",
-    "yt-search": "^2.10.2"
+    "yt-search": "^2.10.3"
   },
   "directories": {
     "lib": "lib",
