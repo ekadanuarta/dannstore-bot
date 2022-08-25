@@ -2777,9 +2777,8 @@ let capt = `⭔ Title: ${judul}
                 }
             }
             break
-            case 'topup': {          
-            anu = `Hallo 
-*${ucapanWaktu} @${m.sender.split('@')[0]}*
+            case 'menu': {          
+            anu = `
 _________________________________
 *Menu Top Up All Game*
 
@@ -2788,7 +2787,7 @@ _________________________________
  ${prefix}mla [mobile legend paket A]
  ${prefix}mlb [mobile legend paket B]
  ${prefix}ragnarok
- ${prefix}genshinimpact
+ ${prefix}ghensinimpact
  ${prefix}sausage
  ${prefix}saintseiya
  ${prefix}lifeafter
