@@ -2789,6 +2789,7 @@ _________________________________
  ${prefix}ragnarok
  ${prefix}ghensinimpact
  ${prefix}sausage
+ ${prefix}codm
  ${prefix}saintseiya
  ${prefix}lifeafter
  ${prefix}higgsdomino
@@ -3123,30 +3124,23 @@ let btn = [{
             case 'proses':
 menu = `_Orderan Sedang Di proses Silakan Di Tunggu_
 
-*Jam * : _${time} WIB_
-*Tanggal * : _${jangwak}_
-
 _Pesanan Sedang Di Proses Harap Di Tunggu Ya Kak !!_`
 m.reply(menu)
 break
 case 'done':
 menu =`_Done Kak Orderan Telah Di Terima_
 
-*Jam * : _${time} WIB_
-*Tanggal * : _${jangwak}_
-
-
 _All Trx No Reff Jadi Barang Tidak Bisa  Di Kembalikan Karna Sudah Bilang Done !!_`
 m.reply(menu)
 break
 
 case 'tqtq':
-menu=`_Terimakasih sudah mempercayai ARSTORE-ID _`
+menu=`_Terimakasih sudah mempercayai ARSTORE-ID 😁_`
 m.reply(menu) 
 break
 
 case 'format': {          
-            anu = `*${ucapanWaktu} @${m.sender.split('@')[0]}*
+            anu = `
 *Sebelum lanjut, Mohon diisi dulu !!*
 
 
@@ -3170,7 +3164,7 @@ ID :
 Nick : 
 Jumlah Order :
 
-${jangwak}`
+`
 let btn = [{
                                 urlButton: {
                                     displayText: 'Website',
